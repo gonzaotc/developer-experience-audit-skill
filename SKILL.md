@@ -90,7 +90,7 @@ Collect all persona findings. Then:
 
 ### 6. Write the report
 
-Fill `templates/report.md` and write to `<target>/dx-audit/<YYYY-MM-DD>.md` (unless the user named another location). Print a terminal summary: the headline metric, the top findings, and the unanswered-questions count.
+Fill `templates/report.md` and write to `<target>/dx-audit/dx-audit-<target-slug>-<YYYY-MM-DD>-<model>.md` (unless the user named another location), where `<model>` is the model that ran the audit (e.g. `claude-opus-4-8`, `claude-sonnet`). Record that same model in the report's header table. Print a terminal summary: the headline metric, the top findings, and the unanswered-questions count.
 
 ## Interaction protocol (inject into each persona)
 

@@ -5,6 +5,7 @@
 | Target | {{target path or name}} |
 | Goal | {{concrete goal, or "free exploration"}} |
 | Date | {{YYYY-MM-DD}} |
+| Model | {{model that ran the audit, e.g. claude-opus-4-8}} |
 | Panel | {{personas used}} |
 | Execution | {{clean-room + typical-dev-machine — against sample project @ path | against empty dir per getting-started}} |
 
