@@ -2,7 +2,7 @@
 
 A Claude skill that audits a technical product for **cognitive overhead** by simulating curious prospective users.
 
-The orchestrator spawns persona sub-agents of varying skill levels, each reading the product **blank-slate** (artifact only, no web, no implementation source), attempting a real goal, and logging where their understanding breaks. Output is a ranked DX report: the exact terms, steps, and questions a newcomer could not resolve from the product alone.
+The orchestrator spawns persona sub-agents of varying skill levels **in parallel**, each reading the product **blank-slate** (artifact only, no web, no implementation source), attempting a real goal, and logging where their understanding breaks. Two of them go further: they install and run the product end-to-end from scratch in isolated environments, capturing real runtime friction — install slowness, silent steps with no feedback, errors, and workarounds — with measured timings. Output is a ranked DX report: the exact terms, steps, and questions a newcomer could not resolve from the product alone.
 
 Built on established UX/QA methods — cognitive walkthrough, think-aloud, Nielsen's heuristics and severity scale, Diátaxis, and information scent (see `references/methods.md`).
 
@@ -16,7 +16,7 @@ Invoke the `developer-experience-audit` skill with a target and, ideally, a conc
 
 - **target** — the product to audit (repo, docs dir, SDK, CLI, or another skill).
 - **goal** (optional) — a concrete task; sharper than free exploration.
-- **sample project** (optional) — lets the execution persona actually run the product.
+- **sample project** (optional) — what the two execution personas run against; without one they start from an empty dir and follow getting-started literally.
 
 The report lands in `<target>/dx-audit/<date>.md` plus a terminal summary.
 

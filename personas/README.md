@@ -25,4 +25,7 @@ Each archetype file carries:
 
 ## Default panel
 
-3–4 spread across prior-knowledge: [true-novice] + [competent-new-to-this] + [expert-skeptic], plus [execution-tryer] only when a sample project is supplied. `security-auditor` is optional for security-sensitive products.
+- **Comprehension** (read-only `Explore`): [true-novice] + [competent-new-to-this] + [expert-skeptic], 3–4 spread across prior-knowledge.
+- **Execution** (`general-purpose`, always run): both instances of [execution-tryer] — clean-room newcomer and typical dev machine. Each does a full install + run in its own isolated copy with a scoped `HOME`/caches/tmp so their installs don't collide.
+
+`security-auditor` is optional for security-sensitive products. Personas run concurrently — spawn them in a single message.

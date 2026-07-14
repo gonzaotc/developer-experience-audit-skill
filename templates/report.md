@@ -6,7 +6,7 @@
 | Goal | {{concrete goal, or "free exploration"}} |
 | Date | {{YYYY-MM-DD}} |
 | Panel | {{personas used}} |
-| Execution | {{ran against sample project @ path | comprehension-only}} |
+| Execution | {{clean-room + typical-dev-machine — against sample project @ path | against empty dir per getting-started}} |
 
 ## Headline: Time to Hello World
 
@@ -63,6 +63,22 @@ First-class list of questions personas asked and could not resolve from the prod
 ## Getting-started friction
 
 Narrative of the onboarding path: each atomic step, whether it passed the four cognitive-walkthrough questions, and where the path broke. Setup friction is called out because it is disproportionately costly.
+
+## Runtime experience (execution personas)
+
+What actually happened when the product was installed and run. Numbers required.
+
+**Real Time-to-Hello-World:** {{clean-room: Xs · typical-dev-machine: Ys}}
+
+| Step | Command | Duration | Output? | Notes |
+|------|---------|----------|---------|-------|
+| | | {{Ns}} | {{yes/no}} | {{friction, retries, error}} |
+
+- **Slowest steps.** {{command → duration}}
+- **Silent steps (no textual feedback).** {{command ran Ns with zero output — user can't tell it's working}}
+- **Errors hit.** {{command → message; was the message actionable?}}
+- **Workarounds the docs didn't give.** {{what the typical-dev-machine persona had to invent}}
+- **Clean-room vs warm-machine divergence.** {{what only worked because something was already installed}}
 
 ## Assumed-knowledge disagreements
 
